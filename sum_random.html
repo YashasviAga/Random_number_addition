@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sum of two random</title>
+    <style>
+        .inner{
+            background-color: yellow;
+            text-align: center;
+            padding: 150px;
+            font-size: 25px;
+            font-weight: 700;
+        }
+        p{
+            display: inline;
+        }
+        .p1, .p2{
+            padding: 30px 35px;
+            margin: auto 0px;
+        }
+        .p1{
+            border: 3px solid green;
+        }
+        .p2{
+            border: 3px solid rgb(1, 1, 128);
+        }
+        input{
+            background-color: white;
+            border: 2px solid rgb(30, 190, 144);
+            padding: 10px;
+        }
+        button{
+            padding: 10px 20px;
+            background-color: red;
+            color: white;
+        }
+    </style>
+</head>
+<body style="background-color: rgb(79, 174, 241);">
+    <div class="main">
+        <div class="inner">
+            <p class="p1" id="num_1"></p>
+            <p class="plus"> + </p>
+            <p class="p2" id="num_2"></p>
+            <p class="equals"> = </p>
+            <input type="text" placeholder="Enter your answer" id="answer">
+            <button onclick="check_func(document.getElementById('answer').value)">Check</button>
+        </div>
+    </div>
+    <script>
+        var num1 = Math.floor(Math.random()*10);
+        var num2 = Math.floor(Math.random()*10);
+        var sum = num1 + num2;
+        document.getElementById("num_1").innerHTML = num1;
+        document.getElementById("num_2").innerHTML = num2;
+        function check_func(ans){
+        if(ans == sum ){
+            alert("Your answer is Correct!");
+        }
+        else{
+            alert("Your answer is Incorrect!");
+        }
+    }
+    </script>
+</body>
+</html>
